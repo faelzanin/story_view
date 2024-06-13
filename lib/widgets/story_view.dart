@@ -633,7 +633,6 @@ class StoryViewState extends State<StoryView> with TickerProviderStateMixin {
       color: Colors.white,
       child: Stack(
         children: <Widget>[
-          _currentView,
           Visibility(
             visible: widget.progressPosition != ProgressPosition.none,
             child: Align(
@@ -721,6 +720,7 @@ class StoryViewState extends State<StoryView> with TickerProviderStateMixin {
                 }),
                 width: 70),
           ),
+          _currentView,
         ],
       ),
     );
